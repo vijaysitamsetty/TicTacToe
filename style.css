@@ -24,6 +24,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
 .title {
