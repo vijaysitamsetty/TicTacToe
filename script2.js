@@ -17,6 +17,11 @@ function closePopup() {
   document.querySelector(".wrapper").style.display = "block";
 }
 
+const updatePlayerTurnMessage = () => {
+  const messageDiv = document.querySelector(".message");
+  messageDiv.textContent = `Player '${xturn ? "X" : "O"}' turn`;
+};
+
 const allbtns = document.querySelectorAll(".cell");
 const restartbtn = document.querySelector(".restartGame");
 const resetbtn = document.querySelector(".reset-button");
@@ -87,6 +92,8 @@ const handleClick = (element) => {
     xturn = !xturn;
     count++;
 
+    updatePlayerTurnMessage();
+
     const winner = checkWinner();
     handleGameEnd(winner);
     showResetbtn();
@@ -97,6 +104,7 @@ const newGame = () => {
   enableButtons();
   closePopup();
   showResetbtn();
+  updatePlayerTurnMessage();
 };
 
 const setupGameControls = () => {
@@ -122,3 +130,4 @@ const setupGameControls = () => {
 };
 
 setupGameControls();
+updatePlayerTurnMessage();
