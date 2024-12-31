@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  margin: 20px 0;
+  margin: 3% 0;
   height: 50vmin;
   width: 50vmin;
   display: grid;
@@ -93,7 +93,6 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  visibility: hidden;
 }
 
 .popup-overlay {
